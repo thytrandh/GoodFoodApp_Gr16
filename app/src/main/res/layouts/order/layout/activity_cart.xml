@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_cart_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp">
+        <ImageButton
+            android:id="@+id/button_OnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            tools:ignore="ContentDescription,ObsoleteLayoutParam,RtlHardcoded"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@color/bg_white"
+            android:tint="@color/txt_grey"/>
+        <TextView
+            android:id="@+id/textView_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add cart successfully"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText,SpUsage" />
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- location-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:background="@color/white"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/img_shipper"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Deliver to"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:text="117 Hoàng Diệu 2, Linh Trung, TP Thủ Đức"
+                        android:background="@drawable/edt_food_note"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <EditText
+                        android:id="@+id/editText_NoteAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edt_food_note"
+                        android:hint=" + Add building, floor, room number."
+                        android:textColorHint="@color/primary"
+                        android:textColor="@color/txt_grey"
+                        android:textSize="14dp"
+                        android:paddingVertical="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Card Voucher -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:background="@color/white"
+                android:layout_marginBottom="5dp"
+                android:paddingHorizontal="15dp">
+
+                <!--Voucher ScrollView -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!-- Voucher Food 01-->
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/radius_btn">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:orientation="horizontal">
+
+                                <!--content voucher-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingVertical="5dp"
+                                    android:layout_gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/voucherName"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Most Loved Fried Chicken"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold"
+                                        tools:ignore="RtlCompat" />
+                                    <TextView
+                                        android:id="@+id/voucherCode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:text="OLONGTREA"
+                                        android:textColor="@color/orange"
+                                        android:textSize="15dp"
+                                        tools:ignore="RtlCompat" />
+
+                                </LinearLayout>
+
+                                <!--Image Food-->
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_vc_1"
+                                    android:background="@color/black"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Voucher Food 02-->
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/radius_btn_getstarted">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:orientation="horizontal">
+
+                                <!--Image Food-->
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_voucher2"
+                                    android:background="@color/primary"/>
+
+                                <!--content voucher-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingRight="10dp"
+                                    android:paddingVertical="5dp"
+                                    android:layout_gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/voucherName2"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Most Loved Fried Chicken"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="@color/black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold"
+                                        tools:ignore="RtlCompat" />
+                                    <TextView
+                                        android:id="@+id/voucherCode2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="textEnd"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:text="OLONGTREA"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        tools:ignore="RtlCompat" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Voucher Food 03-->
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/radius_btn">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:orientation="horizontal">
+
+                                <!--content voucher-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingVertical="5dp"
+                                    android:layout_gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/voucherName3"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Most Loved Fried Chicken"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold"
+                                        tools:ignore="RtlCompat" />
+                                    <TextView
+                                        android:id="@+id/voucherCode3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:text="OLONGTREA"
+                                        android:textColor="@color/orange"
+                                        android:textSize="15dp"
+                                        tools:ignore="RtlCompat" />
+
+                                </LinearLayout>
+
+                                <!--Image Food-->
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_vc_3"
+                                    android:background="@color/black"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- RCV Load cart-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <!--Image Food-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="15dp">
+                    <ImageView
+                        android:id="@+id/imageView_Food"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/list_food_1" />
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_food"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView_FoodName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Most Loved Fried Chicken"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="x"
+                            android:textColor="@color/txt_grey"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/textView_Quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="2"
+                            android:textColor="@color/txt_grey"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/textView_Unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text=" Servings"
+                            android:textColor="@color/txt_grey"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Note: "
+                            android:textColor="@color/txt_grey"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/textView_Note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Its Sugar"
+                            android:textColor="@color/txt_grey"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- click back stall-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="5dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/layout_Payment"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Would you like something more?"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/textView_PaymentMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Choose more dishes"
+                        android:textColor="@color/txt_grey"
+                        android:textStyle="bold"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/editText_AddPromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edt_food_note"
+                    android:text="Add Dishes "
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:textSize="13dp"
+                    android:paddingVertical="10dp"/>
+
+
+
+
+            </LinearLayout>
+
+            <!-- note-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="5dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Go to your Cart to Place Order. Thanks!"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+
+            <!-- Total-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <!--Delivery fee-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:gravity="center|left"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/txt_grey"
+                            android:layout_weight="3"
+                            android:textStyle="bold"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text="25.000"
+                                android:textColor="@color/txt_grey"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text="đ"
+                                android:textColor="@color/txt_grey"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Total -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subtotal"
+                            android:gravity="center|left"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:textStyle="bold"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/textView_Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25.500"
+                                android:gravity="center|left"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:layout_weight="3"
+                                android:textStyle="bold"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="đ"
+                                android:gravity="center|left"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:layout_weight="3"
+                                android:textStyle="bold"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Button Place Order-->
+            <Button
+                android:id="@+id/button_Go_to_Cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/radius_btn"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="10dp"
+                android:paddingVertical="15dp"
+                android:text="GO TO CART"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout >
